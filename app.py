@@ -588,6 +588,11 @@ def health():
 # ═════════════════════════════════════════════════════════════════
 DEBUG_DATE = "2026-05-02"   # ← change this to any date you want to test
 
+@app.route("/")
+def home():
+    return "Flask API is running successfully 🚀"
+
+
 @app.route("/debug", methods=["GET"])
 def debug_predict():
     results = {}
